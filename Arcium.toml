@@ -1,0 +1,13 @@
+[localnet]
+# this generates all accounts needed to run a node
+# nodes corresponds to the number as u32 of nodes in the network
+nodes = 2
+# each nested array represents a cluster of nodes
+# index of the array corresponds to the cluster index
+# the u32s in each nested array corresponds to the node offset in that given cluster
+clusters = [
+    [0, 1]
+]
+
+# number of seconds to wait for the localnet to come online
+localnet_timeout_secs = 60

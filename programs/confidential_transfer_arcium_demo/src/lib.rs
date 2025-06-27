@@ -392,20 +392,14 @@ pub struct TransferCallback<'info> {
     pub instructions_sysvar: AccountInfo<'info>,
     #[account(
         mut,
-        seeds = [b"encrypted_balance", sender.key().as_ref()],
-        bump,
     )]
+    // CHECK: No need for seeds as we pass this account to arcium via the callback accounts field in the wrap instruction
     pub sender_account: Account<'info, EncryptedBalanceAccount>,
     #[account(
         mut,
-        seeds = [b"encrypted_balance", receiver.key().as_ref()],
-        bump,
     )]
+    // CHECK: No need for seeds as we pass this account to arcium via the callback accounts field in the wrap instruction
     pub receiver_account: Account<'info, EncryptedBalanceAccount>,
-    /// CHECK: Sender public key
-    pub sender: UncheckedAccount<'info>,
-    /// CHECK: Receiver public key
-    pub receiver: UncheckedAccount<'info>,
 }
 
 #[account]

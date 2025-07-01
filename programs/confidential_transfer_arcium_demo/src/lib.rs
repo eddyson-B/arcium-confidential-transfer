@@ -245,12 +245,12 @@ pub struct Wrap<'info> {
     #[account(
         address = derive_comp_def_pda!(COMP_DEF_OFFSET_WRAP)
     )]
-    pub comp_def_account: Account<'info, ComputationDefinitionAccount>,
+    pub comp_def_account: Box<Account<'info, ComputationDefinitionAccount>>,
     #[account(
         mut,
         address = derive_cluster_pda!(mxe_account)
     )]
-    pub cluster_account: Account<'info, Cluster>,
+    pub cluster_account: Box<Account<'info, Cluster>>,
     #[account(
         mut,
         address = ARCIUM_STAKING_POOL_ACCOUNT_ADDRESS,
@@ -320,7 +320,7 @@ pub struct Transfer<'info> {
     #[account(
         address = derive_mxe_pda!()
     )]
-    pub mxe_account: Account<'info, PersistentMXEAccount>,
+    pub mxe_account: Box<Account<'info, PersistentMXEAccount>>,
     #[account(
         mut,
         address = derive_mempool_pda!()
@@ -411,4 +411,3 @@ pub struct EncryptedBalanceAccount {
 
 #[account]
 pub struct PoolAccount {}
-

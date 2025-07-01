@@ -1,3 +1,24 @@
+# To run with Docker:
+
+1. Build the Docker image:
+```bash
+docker build -t arcium-dev .
+```
+
+2. Run the container (this will install the arcium toolchain on startup, might take a minute or two):
+```bash
+docker run -it arcium-dev
+```
+
+3. Run the tests:
+
+```bash
+cd confidential-transfer-arcium-demo/ && arcium test
+```
+
+
+
+
 # Structure of this project
 
 This project is structured pretty similarly to how a regular Solana Anchor project is structured. The main difference lies in there being two places to write code here:

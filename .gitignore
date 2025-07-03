@@ -8,4 +8,3 @@ test-ledger
 encrypted-ixs/arcis_temp_target
 build
 encrypted-ixs/src/main.rs
-artifacts/

@@ -1,0 +1,5 @@
+2025-07-03T10:22:49.488838Z  INFO arx: arx/src/main.rs:46: Running ARX
+2025-07-03T10:22:49.488886Z DEBUG arx: arx/src/main.rs:48: Installing AWS LC crypto provider
+2025-07-03T10:22:49.488901Z DEBUG arx: arx/src/main.rs:53: Reading node keypair and identity files from env
+2025-07-03T10:22:49.488907Z DEBUG arx: arx/src/main.rs:59: Checking Solana is up and running
+2025-07-03T10:22:49.538491Z  INFO arx: arx/src/main.rs:65: Creating coordinator

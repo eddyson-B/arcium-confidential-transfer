@@ -1,0 +1,6 @@
+MXE_PROGRAM_ID=75MYEEgbXuUeXwUa834fhyAWgEtsjrajgWjiQj5Th3eF
+RPC_URL=http://host.docker.internal:8899
+SERVER_HOST=172.20.0.10
+SERVER_PORT=8080
+CLUSTER=localnet
+KEYPAIR_PATH=/kp.json

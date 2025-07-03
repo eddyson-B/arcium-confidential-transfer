@@ -1,7 +1,7 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
 import { PublicKey } from "@solana/web3.js";
-import { ConfidentialTransferArciumDemo } from "../target/types/confidential_transfer_arcium_demo";
+import { ConfidentialTransfer } from "../target/types/confidential_transfer_arcium";
 import { randomBytes } from "crypto";
 import {
   awaitComputationFinalization,
@@ -33,11 +33,11 @@ import {
   getAccount,
 } from "@solana/spl-token";
 
-describe("ConfidentialTransferArciumDemo", () => {
+describe("ConfidentialTransfer", () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.AnchorProvider.env());
   const program = anchor.workspace
-    .ConfidentialTransferArciumDemo as Program<ConfidentialTransferArciumDemo>;
+    .ConfidentialTransfer as Program<ConfidentialTransfer>;
   const provider = anchor.getProvider();
 
   type Event = anchor.IdlEvents<(typeof program)["idl"]>;
@@ -69,7 +69,7 @@ describe("ConfidentialTransferArciumDemo", () => {
   let programTokenAccount: PublicKey;
 
   before(async () => {
-    owner = readKpJson(`${os.homedir()}/.config/solana/id.json`);
+    owner = readKpJson(`./id.json`);
 
     // Create a test mint
     console.log("Creating test mint");
@@ -464,7 +464,7 @@ describe("ConfidentialTransferArciumDemo", () => {
   });
 
   async function initWrapCompDef(
-    program: Program<ConfidentialTransferArciumDemo>,
+    program: Program<ConfidentialTransfer>,
     owner: anchor.web3.Keypair,
     uploadRawCircuit: boolean,
     offchainSource: boolean
@@ -523,7 +523,7 @@ describe("ConfidentialTransferArciumDemo", () => {
   }
 
   async function initTransferCompDef(
-    program: Program<ConfidentialTransferArciumDemo>,
+    program: Program<ConfidentialTransfer>,
     owner: anchor.web3.Keypair,
     uploadRawCircuit: boolean,
     offchainSource: boolean

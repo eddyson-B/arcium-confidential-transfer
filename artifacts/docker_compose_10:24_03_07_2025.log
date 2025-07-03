@@ -1,0 +1,32 @@
+[stdout] Attaching to arcium-callback-server-1, arx-node-0-1, arx-node-1-1
+[stdout] [Karcium-callback-server-1 exited with code 0
+[stdout] [Karx-node-1-1 exited with code 0
+[stdout] [Karcium-callback-server-1 exited with code 0
+[stdout] [Karx-node-0-1 exited with code 0
+[stdout] [Karcium-callback-server-1 exited with code 101
+[stdout] [Karx-node-1-1 exited with code 0
+[stdout] [Karx-node-0-1 exited with code 0
+[stdout] [Karcium-callback-server-1 exited with code 101
+[stdout] [Karcium-callback-server-1 exited with code 101
+[stdout] [Karx-node-1-1 exited with code 0
+[stdout] [Karx-node-0-1 exited with code 0
+[stdout] [Karx-node-1-1 exited with code 101
+[stdout] [Karx-node-0-1 exited with code 101
+[stdout] [Karcium-callback-server-1 exited with code 101
+[stdout] [Karx-node-1-1 exited with code 101
+[stdout] [Karx-node-0-1 exited with code 101
+[stdout] [Karx-node-1-1 exited with code 101
+[stdout] [Karcium-callback-server-1 exited with code 101
+[stdout] [Karx-node-0-1 exited with code 101
+[stdout] Attaching to arcium-callback-server-1, arx-node-0-1, arx-node-1-1
+[stderr] Gracefully stopping... (press Ctrl+C again to force)
+[stderr]  Container artifacts-arx-node-0-1  Stopping
+[stderr]  Container artifacts-arcium-callback-server-1  Stopping
+[stderr]  Container artifacts-arx-node-1-1  Stopping
+[stderr]  Container artifacts-arx-node-1-1  Running
+[stderr]  Container artifacts-arcium-callback-server-1  Running
+[stderr]  Container artifacts-arx-node-0-1  Running
+[stdout] Attaching to arcium-callback-server-1, arx-node-0-1, arx-node-1-1
+[stdout] [Karcium-callback-server-1 exited with code 137
+[stdout] [Karx-node-1-1 exited with code 137
+[stdout] [Karx-node-0-1 exited with code 137

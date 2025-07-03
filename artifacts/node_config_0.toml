@@ -1,0 +1,16 @@
+[network]
+address = "172.20.0.100"
+
+[node]
+ending_epoch = 9223372036854775807
+hardware_claim = 0
+offset = 0
+starting_epoch = 0
+
+[solana]
+cluster = "Localnet"
+endpoint_rpc = "http://host.docker.internal:8899"
+endpoint_wss = "ws://host.docker.internal:8900"
+
+[solana.commitment]
+commitment = "confirmed"

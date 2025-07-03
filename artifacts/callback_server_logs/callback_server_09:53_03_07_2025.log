@@ -1,0 +1,3 @@
+2025-07-03T09:53:52.358186Z  INFO callback_server: callback-server/src/main.rs:232: RPC URL: http://host.docker.internal:8899
+2025-07-03T09:53:52.361508Z  INFO callback_server: callback-server/src/main.rs:255: Solana cluster: Localnet
+2025-07-03T09:53:52.361592Z  INFO callback_server: callback-server/src/main.rs:277: listening on 172.20.0.10:8080

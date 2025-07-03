@@ -1,0 +1,105 @@
+networks:
+  arx_network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+services:
+  arcium-callback-server:
+    image: "arcium/arcium-callback-server:latest"
+    restart: unless-stopped
+    command: ["/bin/sh", "-c", "/usr/local/bin/callback-server \"$@\" > /usr/callback_server.log 2>&1"]
+    ports:
+      - "8080:8080"
+    volumes:
+      - type: bind
+        source: callback-server-env
+        target: /.env
+      - type: bind
+        source: localnet/callback_server.json
+        target: /kp.json
+      - type: bind
+        source: callback_server_logs
+        target: /logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      arx_network:
+        ipv4_address: 172.20.0.10
+
+
+  arx-node-0:
+    image: "arcium/arx-node:latest"
+    restart: unless-stopped
+    environment:
+      NODE_IDENTITY_FILE: /usr/arx-node/node-keys/node_identity.pem
+      NODE_KEYPAIR_FILE: /usr/arx-node/node-keys/node_keypair.json
+      OPERATOR_KEYPAIR_FILE: /usr/arx-node/node-keys/operator_keypair.json
+      NODE_CONFIG_PATH: /usr/arx-node/arx/node_config.toml
+    volumes:
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/node_config_0.toml
+        target: /usr/arx-node/arx/node_config.toml
+        read_only: false
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/localnet/node_0.json
+        target: /usr/arx-node/node-keys/node_keypair.json
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/localnet/node_0.json
+        target: /usr/arx-node/node-keys/operator_keypair.json
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/localnet/identity_0.pem
+        target: /usr/arx-node/node-keys/node_identity.pem
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/arx_node_logs
+        target: /usr/arx-node/logs
+      - type: bind
+        source: /tmp/computation_folder_0
+        target: /tmp/computation_folder
+      - type: bind
+        source: /tmp/vault
+        target: /tmp/vault
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      arx_network:
+        ipv4_address: 172.20.0.100
+    
+
+  arx-node-1:
+    image: "arcium/arx-node:latest"
+    restart: unless-stopped
+    environment:
+      NODE_IDENTITY_FILE: /usr/arx-node/node-keys/node_identity.pem
+      NODE_KEYPAIR_FILE: /usr/arx-node/node-keys/node_keypair.json
+      OPERATOR_KEYPAIR_FILE: /usr/arx-node/node-keys/operator_keypair.json
+      NODE_CONFIG_PATH: /usr/arx-node/arx/node_config.toml
+    volumes:
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/node_config_1.toml
+        target: /usr/arx-node/arx/node_config.toml
+        read_only: false
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/localnet/node_1.json
+        target: /usr/arx-node/node-keys/node_keypair.json
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/localnet/node_1.json
+        target: /usr/arx-node/node-keys/operator_keypair.json
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/localnet/identity_1.pem
+        target: /usr/arx-node/node-keys/node_identity.pem
+      - type: bind
+        source: /root/work/confidential/arcium-confidential-transfer-demo/artifacts/arx_node_logs
+        target: /usr/arx-node/logs
+      - type: bind
+        source: /tmp/computation_folder_1
+        target: /tmp/computation_folder
+      - type: bind
+        source: /tmp/vault
+        target: /tmp/vault
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      arx_network:
+        ipv4_address: 172.20.0.101
+    

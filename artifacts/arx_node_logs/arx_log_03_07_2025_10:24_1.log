@@ -1,0 +1,60 @@
+2025-07-03T10:24:42.622514Z  INFO arx: arx/src/main.rs:46: Running ARX
+2025-07-03T10:24:42.622561Z DEBUG arx: arx/src/main.rs:48: Installing AWS LC crypto provider
+2025-07-03T10:24:42.622576Z DEBUG arx: arx/src/main.rs:53: Reading node keypair and identity files from env
+2025-07-03T10:24:42.622582Z DEBUG arx: arx/src/main.rs:59: Checking Solana is up and running
+2025-07-03T10:24:42.667888Z  INFO arx: arx/src/main.rs:65: Creating coordinator
+2025-07-03T10:24:43.120590Z  INFO arx::unit::cache_unit: arx/src/unit/cache_unit.rs:92: Cache unit started
+2025-07-03T10:24:43.120619Z  INFO arx: arx/src/main.rs:71: Starting coordinator
+2025-07-03T10:24:43.120618Z  INFO arx::unit::circuit_unit: arx/src/unit/circuit_unit.rs:69: Circuit unit started
+2025-07-03T10:24:43.120645Z  INFO arx: arx/src/main.rs:74: Waiting for Ctrl+C
+2025-07-03T10:24:43.120644Z  INFO arx::unit::cluster_unit: arx/src/unit/cluster_unit.rs:144: Cluster unit started
+2025-07-03T10:24:43.120691Z  INFO arx::unit::execpool_unit: arx/src/unit/execpool_unit.rs:108: Execpool unit started
+2025-07-03T10:24:43.120713Z  INFO arx::unit::state_unit: arx/src/unit/state_unit.rs:126: State unit started
+2025-07-03T10:24:43.120766Z  INFO arx::unit::mempool_unit: arx/src/unit/mempool_unit.rs:101: Mempool unit started
+2025-07-03T10:24:43.120778Z  INFO arx::coordinator: arx/src/coordinator.rs:364: Coordinator started
+2025-07-03T10:24:43.120707Z  INFO arx::unit::online_phase_unit: arx/src/unit/online_phase_unit.rs:149: Online phase unit started
+2025-07-03T10:24:43.120657Z  INFO arx::unit::computation_transaction_unit: arx/src/unit/computation_transaction_unit.rs:138: Computation transaction unit started
+2025-07-03T10:24:43.121179Z  INFO arx::unit::mxe_unit: arx/src/unit/mxe_unit.rs:100: MXE unit started
+2025-07-03T10:24:43.120777Z  INFO arx::unit::node_transaction_unit: arx/src/unit/node_transaction_unit.rs:98: Node transaction unit started
+2025-07-03T10:24:43.120773Z  INFO arx::unit::inputs_unit: arx/src/unit/inputs_unit.rs:88: Inputs unit started
+2025-07-03T10:24:43.121205Z  INFO arx::unit::peers_unit: arx/src/unit/peers_unit.rs:87: Peers unit started
+2025-07-03T10:24:43.123082Z DEBUG arx::unit::node_transaction_unit: arx/src/unit/node_transaction_unit.rs:112: Activating ARX node (attempt 1/5)
+2025-07-03T10:24:43.123445Z DEBUG arx::unit::mxe_unit: arx/src/unit/mxe_unit.rs:125: Fetching initial mxe accs via rpc
+2025-07-03T10:24:43.154734Z DEBUG arx::unit::mxe_unit: arx/src/unit/mxe_unit.rs:330: Sending messages: [MXEUnitOutMessage { cluster: GgSqqAyH7AVY3Umcv8NvncrjFaNJuQLmxzxFxPoPW2Yd, mxe: 75MYEEgbXuUeXwUa834fhyAWgEtsjrajgWjiQj5Th3eF, status: Joined }]
+2025-07-03T10:24:43.656493Z DEBUG arx::unit::node_transaction_unit: arx/src/unit/node_transaction_unit.rs:128: ARX node activated
+2025-07-03T10:24:43.656528Z DEBUG arx::coordinator: arx/src/coordinator.rs:370: Coordinator received activation unit message: activated
+2025-07-03T10:24:43.656542Z DEBUG arx::coordinator: arx/src/coordinator.rs:528: Coordinator received mxe unit message: cluster: GgSqqAyH7AVY3Umcv8NvncrjFaNJuQLmxzxFxPoPW2Yd, mxe: 75MYEEgbXuUeXwUa834fhyAWgEtsjrajgWjiQj5Th3eF, status: Joined
+2025-07-03T10:24:43.656569Z DEBUG arx::coordinator: arx/src/coordinator.rs:417: Coordinator received cluster unit message: cluster: 0, status: Joined
+2025-07-03T10:24:43.656613Z  WARN arx::unit::mxe_unit: arx/src/unit/mxe_unit.rs:189: Cluster account GgSqqAyH7AVY3Umcv8NvncrjFaNJuQLmxzxFxPoPW2Yd already being observed.
+2025-07-03T10:24:43.827539Z DEBUG arx::coordinator: arx/src/coordinator.rs:508: Coordinator received mempool unit message: computations ids: []
+2025-07-03T10:24:43.827718Z DEBUG arx::unit::mempool_unit: arx/src/unit/mempool_unit.rs:147: Subscribed to mempool account 75meJRarAYBbZxtmTWNgfYTjEA9kGXSpR3QUuefT2qWt
+2025-07-03T10:24:43.828144Z DEBUG arx::coordinator: arx/src/coordinator.rs:469: Coordinator received execpool unit message: computations ids: []
+2025-07-03T10:24:43.828284Z DEBUG arx::unit::execpool_unit: arx/src/unit/execpool_unit.rs:154: Subscribed to execpool account Af9LM2ZiUGkiRE6mW57dpq6ZEkA7jCfaqsD4tUKUDzZp
+2025-07-03T10:24:51.509917Z  WARN arx::unit::mempool_unit: arx/src/unit/mempool_unit.rs:195: Stream closed for mempool account 75meJRarAYBbZxtmTWNgfYTjEA9kGXSpR3QUuefT2qWt, attempting to resubscribe
+2025-07-03T10:24:51.510053Z  WARN arx::unit::mxe_unit: arx/src/unit/mxe_unit.rs:257: Stream closed for cluster account GgSqqAyH7AVY3Umcv8NvncrjFaNJuQLmxzxFxPoPW2Yd
+2025-07-03T10:24:51.510134Z  WARN arx::unit::execpool_unit: arx/src/unit/execpool_unit.rs:202: Stream closed for execpool account Af9LM2ZiUGkiRE6mW57dpq6ZEkA7jCfaqsD4tUKUDzZp, attempting to resubscribe
+2025-07-03T10:24:51.510185Z  WARN arx::unit::cluster_unit: arx/src/unit/cluster_unit.rs:233: Stream closed for arx account XdfSwb8ZajhN7CerfBSJVhyfx5fyLtv34QVKSRgMFA9
+2025-07-03T10:24:51.510207Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 1/5): unable to connect to server
+2025-07-03T10:24:51.510319Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 1/5): unable to connect to server
+2025-07-03T10:24:51.510357Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 1/5): unable to connect to server
+2025-07-03T10:24:51.510379Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 1/5): unable to connect to server
+2025-07-03T10:24:52.512119Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 2/5): unable to connect to server
+2025-07-03T10:24:52.512142Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 2/5): unable to connect to server
+2025-07-03T10:24:52.512154Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 2/5): unable to connect to server
+2025-07-03T10:24:52.512175Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 2/5): unable to connect to server
+2025-07-03T10:24:54.513612Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 3/5): unable to connect to server
+2025-07-03T10:24:54.513617Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 3/5): unable to connect to server
+2025-07-03T10:24:54.513624Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 3/5): unable to connect to server
+2025-07-03T10:24:54.513640Z ERROR arx::unit: arx/src/unit.rs:123: Failed to create new WebSocket connection (attempt 3/5): unable to connect to server
+2025-07-03T10:24:58.558182Z DEBUG arx::unit: arx/src/unit.rs:170: Resubscribed to account GgSqqAyH7AVY3Umcv8NvncrjFaNJuQLmxzxFxPoPW2Yd
+2025-07-03T10:24:58.558203Z DEBUG arx::unit: arx/src/unit.rs:170: Resubscribed to account Af9LM2ZiUGkiRE6mW57dpq6ZEkA7jCfaqsD4tUKUDzZp
+2025-07-03T10:24:58.558221Z DEBUG arx::unit: arx/src/unit.rs:170: Resubscribed to account 75meJRarAYBbZxtmTWNgfYTjEA9kGXSpR3QUuefT2qWt
+2025-07-03T10:24:58.558239Z DEBUG arx::unit: arx/src/unit.rs:170: Resubscribed to account XdfSwb8ZajhN7CerfBSJVhyfx5fyLtv34QVKSRgMFA9
+2025-07-03T10:24:58.559206Z ERROR arx::unit: arx/src/unit.rs:189: Failed to refresh state for GgSqqAyH7AVY3Umcv8NvncrjFaNJuQLmxzxFxPoPW2Yd: Internal error: Failed to get mxe account data: Account not found
+2025-07-03T10:24:58.559242Z DEBUG arx::unit::mxe_unit: arx/src/unit/mxe_unit.rs:282: Resubscribed to all mempools
+2025-07-03T10:24:58.559304Z ERROR arx::unit: arx/src/unit.rs:189: Failed to refresh state for MempoolInfo { cluster: GgSqqAyH7AVY3Umcv8NvncrjFaNJuQLmxzxFxPoPW2Yd, mxe: 75MYEEgbXuUeXwUa834fhyAWgEtsjrajgWjiQj5Th3eF, mempool: 75meJRarAYBbZxtmTWNgfYTjEA9kGXSpR3QUuefT2qWt }: Internal error: Failed to get mempool account data: AccountNotFound: pubkey=75meJRarAYBbZxtmTWNgfYTjEA9kGXSpR3QUuefT2qWt
+2025-07-03T10:24:58.559330Z DEBUG arx::unit::mempool_unit: arx/src/unit/mempool_unit.rs:219: Resubscribed to all mempools
+2025-07-03T10:24:58.559385Z ERROR arx::unit: arx/src/unit.rs:189: Failed to refresh state for XdfSwb8ZajhN7CerfBSJVhyfx5fyLtv34QVKSRgMFA9: Internal error: Failed to get cluster memberships for account XdfSwb8ZajhN7CerfBSJVhyfx5fyLtv34QVKSRgMFA9: Account not found
+2025-07-03T10:24:58.559426Z DEBUG arx::unit::cluster_unit: arx/src/unit/cluster_unit.rs:257: Resubscribed to arx acc
+2025-07-03T10:24:58.559488Z ERROR arx::unit: arx/src/unit.rs:189: Failed to refresh state for ExecpoolInfo { cluster: GgSqqAyH7AVY3Umcv8NvncrjFaNJuQLmxzxFxPoPW2Yd, mxe: 75MYEEgbXuUeXwUa834fhyAWgEtsjrajgWjiQj5Th3eF, execpool: Af9LM2ZiUGkiRE6mW57dpq6ZEkA7jCfaqsD4tUKUDzZp }: Internal error: Failed to get execpool account data: AccountNotFound: pubkey=Af9LM2ZiUGkiRE6mW57dpq6ZEkA7jCfaqsD4tUKUDzZp
+2025-07-03T10:24:58.559511Z DEBUG arx::unit::execpool_unit: arx/src/unit/execpool_unit.rs:225: Resubscribed to all execpools

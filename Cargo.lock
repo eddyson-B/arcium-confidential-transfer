@@ -704,7 +704,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "confidential_transfer_arcium_demo"
+name = "confidential_transfer_arcium"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
